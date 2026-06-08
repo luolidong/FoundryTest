@@ -1,0 +1,21 @@
+No files changed, compilation skipped
+
+Ran 15 tests for test/Bank.t.sol:BankTest
+[PASS] test_deposit_updates_user_balance() (gas: 159596)
+[PASS] test_deposit_zero_amount_reverts() (gas: 11545)
+[PASS] test_non_owner_cannot_withdraw() (gas: 105933)
+[PASS] test_non_owner_cannot_withdraw_all() (gas: 105423)
+[PASS] test_owner_can_withdraw() (gas: 113829)
+[PASS] test_owner_can_withdraw_all() (gas: 112221)
+[PASS] test_receive_function_updates_balance() (gas: 102817)
+[PASS] test_top_depositors_same_user_multiple_deposits() (gas: 280783)
+[PASS] test_top_depositors_with_1_user() (gas: 107134)
+[PASS] test_top_depositors_with_2_users() (gas: 186824)
+[PASS] test_top_depositors_with_3_users() (gas: 265667)
+[PASS] test_top_depositors_with_4_users() (gas: 305569)
+[PASS] test_withdraw_all_empty_contract_reverts() (gas: 10983)
+[PASS] test_withdraw_insufficient_balance_reverts() (gas: 103271)
+[PASS] test_withdraw_zero_amount_reverts() (gas: 103319)
+Suite result: ok. 15 passed; 0 failed; 0 skipped; finished in 768.08µs (2.58ms CPU time)
+
+Ran 1 test suite in 4.35ms (768.08µs CPU time): 15 tests passed, 0 failed, 0 skipped (15 total tests)

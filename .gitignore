@@ -17,9 +17,6 @@ docs/
 .env.*
 !.env.example
 
-# Log files
-log/
-*.log
 
 # Coverage reports
 coverage/
