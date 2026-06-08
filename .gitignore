@@ -1,0 +1,38 @@
+# Compiler files
+cache/
+out/
+
+# Commonly ignored directories
+.logs/
+.ignore/
+
+# Ignores development broadcast logs
+/broadcast/**/
+
+# Docs
+docs/
+
+# Dotenv file
+.env
+.env.*
+!.env.example
+
+# Log files
+log/
+*.log
+
+# Coverage reports
+coverage/
+coverage.json
+*.lcov
+
+# IDE files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Gas snapshots
+.gas-snapshot
