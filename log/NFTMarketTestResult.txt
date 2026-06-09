@@ -1,0 +1,59 @@
+No files changed, compilation skipped
+
+Ran 24 tests for test/NFTMarket.t.sol:NFTMarketTest
+[PASS] invariant_MarketNeverHoldsTokens() (runs: 256, calls: 128000, reverts: 88364)
+
+╭-----------+-------------------+-------+---------+----------╮
+| Contract  | Selector          | Calls | Reverts | Discards |
++============================================================+
+| MyToken   | approve           | 9978  | 17      | 0        |
+|-----------+-------------------+-------+---------+----------|
+| MyToken   | transfer          | 9691  | 9565    | 0        |
+|-----------+-------------------+-------+---------+----------|
+| MyToken   | transferFrom      | 9850  | 9713    | 0        |
+|-----------+-------------------+-------+---------+----------|
+| NFTMarket | cancelListing     | 9926  | 9926    | 0        |
+|-----------+-------------------+-------+---------+----------|
+| NFTMarket | listNFT           | 9995  | 9995    | 0        |
+|-----------+-------------------+-------+---------+----------|
+| NFTMarket | onERC721Received  | 9834  | 0       | 0        |
+|-----------+-------------------+-------+---------+----------|
+| NFTMarket | purchaseNFT       | 9929  | 9929    | 0        |
+|-----------+-------------------+-------+---------+----------|
+| TestNFT   | approve           | 9801  | 9801    | 0        |
+|-----------+-------------------+-------+---------+----------|
+| TestNFT   | mint              | 9801  | 24      | 0        |
+|-----------+-------------------+-------+---------+----------|
+| TestNFT   | safeTransferFrom  | 19623 | 19623   | 0        |
+|-----------+-------------------+-------+---------+----------|
+| TestNFT   | setApprovalForAll | 9818  | 17      | 0        |
+|-----------+-------------------+-------+---------+----------|
+| TestNFT   | transferFrom      | 9754  | 9754    | 0        |
+╰-----------+-------------------+-------+---------+----------╯
+
+[PASS] testFuzz_ListAndPurchase_RandomPriceAndBuyer(uint256,address) (runs: 256, μ: 248872, ~: 248872)
+[PASS] testFuzz_ListNFT_RandomPrice(uint256) (runs: 256, μ: 171794, ~: 171794)
+[PASS] testFuzz_PurchaseNFT_RandomBuyer(address) (runs: 256, μ: 247655, ~: 247655)
+[PASS] testFuzz_PurchaseNFT_RandomPrice(uint256) (runs: 256, μ: 221387, ~: 221387)
+[PASS] test_CancelListing_NotOwner() (gas: 171079)
+[PASS] test_CancelListing_Success() (gas: 158887)
+[PASS] test_Invariant_MarketNeverHoldsTokens_AfterCancellation() (gas: 155981)
+[PASS] test_Invariant_MarketNeverHoldsTokens_AfterFailedPurchase() (gas: 204341)
+[PASS] test_Invariant_MarketNeverHoldsTokens_AfterListing() (gas: 172599)
+[PASS] test_Invariant_MarketNeverHoldsTokens_AfterMultipleTransactions() (gas: 1056715)
+[PASS] test_Invariant_MarketNeverHoldsTokens_AfterPurchase() (gas: 219753)
+[PASS] test_ListNFT_InvalidPrice() (gas: 18351)
+[PASS] test_ListNFT_MultipleListings() (gas: 374324)
+[PASS] test_ListNFT_NotApproved() (gas: 34979)
+[PASS] test_ListNFT_NotOwner() (gas: 24509)
+[PASS] test_ListNFT_Success() (gas: 175989)
+[PASS] test_PurchaseNFT_BuyerIsSeller() (gas: 197311)
+[PASS] test_PurchaseNFT_DuplicatePurchase() (gas: 217781)
+[PASS] test_PurchaseNFT_InsufficientAllowance() (gas: 181799)
+[PASS] test_PurchaseNFT_InsufficientPayment() (gas: 200717)
+[PASS] test_PurchaseNFT_ListingNotActive() (gas: 183549)
+[PASS] test_PurchaseNFT_Overpayment() (gas: 222497)
+[PASS] test_PurchaseNFT_Success() (gas: 231953)
+Suite result: ok. 24 passed; 0 failed; 0 skipped; finished in 1.63s (1.71s CPU time)
+
+Ran 1 test suite in 1.63s (1.63s CPU time): 24 tests passed, 0 failed, 0 skipped (24 total tests)
